@@ -15,14 +15,14 @@ def scrap_data(link):
     data = BeautifulSoup(content, 'html.parser')
 
     list_nama, list_harga, list_penjualan, list_diskon, list_lokasi, bahan_pakaian = [],[],[],[],[],[]
-    for i, area in enumerate(data.find_all('div', class_="Bm3ON"), start=1):
+    for i, area in enumerate(data.find_all('div', class_="GANTI_CLASS_BOX"), start=1):
         print(i)
         print("Mengambil data ke-", i)
-        nama_elem = area.find('div', class_="RfADt")
-        harga_elem = area.find('span', class_="ooOxS")
-        terjual_elem = area.find('span', class_="_1cEkb")
-        diskon_elem = area.find('span', class_="IcOsH")
-        lokasi_toko_elem = area.find('span', class_="oa6ri")
+        nama_elem = area.find('div', class_="GANTI_CLASS_YANG_SESUAI")
+        harga_elem = area.find('span', class_="GANTI_CLASS_YANG_SESUAI")
+        terjual_elem = area.find('span', class_="GANTI_CLASS_YANG_SESUAI")
+        diskon_elem = area.find('span', class_="GANTI_CLASS_YANG_SESUAI")
+        lokasi_toko_elem = area.find('span', class_="GANTI_CLASS_YANG_SESUAI")
 
         if nama_elem and harga_elem and terjual_elem and diskon_elem and lokasi_toko_elem:
             nama = nama_elem.get_text()
@@ -39,7 +39,7 @@ def scrap_data(link):
 
             try:
                 clickable_area = WebDriverWait(driver, 10).until(
-                    EC.element_to_be_clickable((By.XPATH, f"(//div[@class='Bm3ON'])[{i}]"))
+                    EC.element_to_be_clickable((By.XPATH, f"(//div[@class='GANTI_CLASS_BOX'])[{i}]"))
                 )
                 clickable_area.click()
 
