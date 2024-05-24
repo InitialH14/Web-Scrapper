@@ -11,12 +11,12 @@ Dalam folder src, terdapat 3 program scrapper:
 Pastikan library Selenium, BeautifulSoup, Pandas, dan web driver sudah terinstall. Dalam repositori ini, web driver yang digunakan adalah chromedriver.
 
 ### Install Selenium
-'pip install selenium'
+`pip install selenium`
 
 ### Install BeautifulSoup
-'pip install beautifulsoup4'
+`pip install beautifulsoup4`
 
 ### Install Pandas
-'pip install pandas'
+`pip install pandas`
 
 
