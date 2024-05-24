@@ -77,7 +77,7 @@ driver.set_window_size(1300, 800)
 
 list_nama_total, list_harga_total, list_penjualan_total, list_diskon_total, list_lokasi_total, list_bahan_total = [], [], [], [], [], []
 for i in range(1, 45):
-    list_nama, list_harga, list_penjualan, list_diskon, list_lokasi, list_bahan = scrap_data(f"https://www.lazada.co.id/tag/jas//?page={i}&q=jas&service=lazlook")
+    list_nama, list_harga, list_penjualan, list_diskon, list_lokasi, list_bahan = scrap_data(f"https://www.lazada.co.id/tag/jas//?page={i}&q=jas&service=lazlook") #contoh link pagination
     list_nama_total.extend(list_nama)
     list_harga_total.extend(list_harga)
     list_penjualan_total.extend(list_penjualan)
@@ -93,6 +93,6 @@ df = pd.DataFrame({
     'Lokasi_Toko': list_lokasi_total,
     'Bahan': list_bahan_total
 })
-df.to_csv('jas_lazada_fashion2.csv', index=False)
+df.to_csv('NAMA_FILE.csv', index=False)
 
 driver.quit()
