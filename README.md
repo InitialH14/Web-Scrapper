@@ -7,7 +7,7 @@ Dalam folder src, terdapat 3 program scrapper:
 - Pagination scrapper: program untuk scrapping banyak halaman
 - Click scrapper: program untuk scrapping suatu halaman yang memiliki fitur yang dapat diklik.
 
-## Usage
+## Penggunaan
 Pastikan library Selenium, BeautifulSoup, Pandas, dan web driver sudah terinstall. Dalam repositori ini, web driver yang digunakan adalah chromedriver.
 
 ### Install Selenium
