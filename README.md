@@ -19,4 +19,5 @@ Pastikan library Selenium, BeautifulSoup, Pandas, dan web driver sudah terinstal
 ### Install Pandas
 `pip install pandas`
 
-
+### About ChromeDriver
+[documentation](https://developer.chrome.com/docs/chromedriver/downloads)
