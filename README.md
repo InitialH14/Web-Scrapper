@@ -21,3 +21,6 @@ Pastikan library Selenium, BeautifulSoup, Pandas, dan web driver sudah terinstal
 
 ### About ChromeDriver
 [documentation](https://developer.chrome.com/docs/chromedriver/downloads)
+
+## Hasil Scrapping
+Scrapping diatas menghasilkan beberapa atribut data dari suatu kategori pakaian, seperti nama produk, harga produk, jumlah produk yang terjual, diskon pada produk, dan lokasi toko. Untuk file Click scrapper mengeluarkan output tambahan yaitu bahan pakaian
