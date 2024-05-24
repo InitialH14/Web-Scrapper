@@ -12,14 +12,14 @@ def scrap_data(link):
     data = BeautifulSoup(content, 'html.parser')
 
     list_nama, list_harga, list_penjualan, list_diskon, list_lokasi = [],[],[],[],[]
-    for i, area in enumerate(data.find_all('div', class_="Bm3ON"), start=1):
+    for i, area in enumerate(data.find_all('div', class_="GANTI_CLASS_BOX"), start=1):
         print(i)
         print("Mengambil data ke-", i)
-        nama_elem = area.find('div', class_="RfADt")
-        harga_elem = area.find('span', class_="ooOxS")
-        terjual_elem = area.find('span', class_="_1cEkb")
-        diskon_elem = area.find('span', class_="IcOsH")
-        lokasi_toko_elem = area.find('span', class_="oa6ri")
+        nama_elem = area.find('div', class_="GANTI_CLASS_YANG_SESUAI")
+        harga_elem = area.find('span', class_="GANTI_CLASS_YANG_SESUAI")
+        terjual_elem = area.find('span', class_="GANTI_CLASS_YANG_SESUAI")
+        diskon_elem = area.find('span', class_="GANTI_CLASS_YANG_SESUAI")
+        lokasi_toko_elem = area.find('span', class_="GANTI_CLASS_YANG_SESUAI")
 
 
         if nama_elem and harga_elem and terjual_elem and diskon_elem and lokasi_toko_elem:
@@ -50,7 +50,7 @@ driver.set_window_size(1300, 800)
 
 list_nama_total, list_harga_total, list_penjualan_total, list_diskon_total, list_lokasi_total = [], [], [], [], []
 for i in range(1,45):
-    list_nama, list_harga, list_penjualan, list_diskon, list_lokasi = scrap_data(f"https://www.lazada.co.id/tag/jas//?page={i}&q=jas&service=lazlook")
+    list_nama, list_harga, list_penjualan, list_diskon, list_lokasi = scrap_data(f"https://www.lazada.co.id/tag/jas//?page={i}&q=jas&service=lazlook") #contoh link pagination
     list_nama_total.extend(list_nama)
     list_harga_total.extend(list_harga)
     list_penjualan_total.extend(list_penjualan)
@@ -58,6 +58,6 @@ for i in range(1,45):
     list_lokasi_total.extend(list_lokasi)
 
 df = pd.DataFrame({'Nama': list_nama_total, 'Harga': list_harga_total, 'Terjual': list_penjualan_total, 'Diskon': list_diskon_total, 'Lokasi_Toko': list_lokasi_total})
-df.to_csv('jas_lazada_fashion.csv', index=False)
+df.to_csv('NAMA_FILE.csv', index=False)
 
 driver.quit()
